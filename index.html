@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" name="" id="fileupload">
+    <button onclick="upload()">上传</button>
+
+
+    <script>
+        function upload(){
+            var f = document.getElementById("fileupload");
+            var filename = f.value;
+            if (!filename || !(filename.endsWith('.jpg') || filename.endsWith('.gif'))) {
+                alert('只支持图片文件');
+                return false;
+            }else{
+                console.log('没毛病');
+                alert('上传成功');
+            }
+        }
+    </script>
+</body>
+</html>
